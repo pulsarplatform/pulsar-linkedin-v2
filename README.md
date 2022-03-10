@@ -1,5 +1,13 @@
 # LinkedIn v2
 
+## pulsar-linkedin-v2
+
+This fork gem has a different name. Please use
+
+```ruby
+gem "pulsar-linkedin-v2", "~> 0"
+```
+
 ## WARNING: DANGER WILL ROBINSON
 
 This is very much a work in progress. Currently only the shares/social stream,
@@ -25,12 +33,12 @@ If you are using OAuth 2.0 and the v1 LinkedIn API, see [emorikawa/linkedin-oaut
 In Bundler:
 
 ```ruby
-gem "linkedin-v2", "~> 0.1.0"
+gem "pulsar-linkedin-v2", "~> 0"
 ```
 
 Otherwise:
 
-    [sudo|rvm] gem install linkedin-v2
+    [sudo|rvm] gem install pulsar-linkedin-v2
 
 # Usage
 

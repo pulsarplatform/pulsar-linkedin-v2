@@ -4,7 +4,7 @@
 require File.expand_path("../lib/linked_in/version", __FILE__)
 
 Gem::Specification.new do |gem|
-  gem.name        = "linkedin-v2"
+  gem.name        = "pulsar-linkedin-v2"
   gem.email       = ["mike.desjardins@cereslogic.com"]
   gem.version     = LinkedIn::VERSION
   gem.authors     = ["Mike Desjardins"]

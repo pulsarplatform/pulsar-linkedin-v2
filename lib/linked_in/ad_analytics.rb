@@ -46,7 +46,7 @@ module LinkedIn
       urns.map!{|urn| urn.is_a?(Numeric) ? id_to_urn(pivot.downcase, urn) : urn}
       urn_params = urns.each_with_index.map{|urn, i| "#{facet}[#{i}]=#{urn}"}.join('&')
 
-      path = "/adAnalyticsV2?q=analytics&pivot=#{pivot}&#{date_to_params(date_from)}&timeGranularity=#{granularity}&fields=#{fields.join(',')}&#{urn_params}"
+      path = "/adAnalytics?q=analytics&pivot=#{pivot}&#{date_to_params(date_from)}&timeGranularity=#{granularity}&fields=#{fields.join(',')}&#{urn_params}"
       get(path, options)
     end
 

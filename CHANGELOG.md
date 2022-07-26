@@ -1,10 +1,17 @@
-# Changelog
+## CHANGELOG
 
-## 1.0.0 - August 1, 2014
+## [1.0.0] - 2022-07-26
+- migrate to Marketing API Versioning
 
-* Complete re-architecture of the Oauth2.0 gem.
+## [0.1.17] - 2022-03-10
+- rename gem to pulsar-linkedin-v2
 
-## 0.1.0 - July 15, 2013
+## [0.1.16e] - 2022-01-13
+- fix faraday adapter warning
 
-* Migrated API over to use Linkedin's OAuth 2.0
-* **NOTE:** This was based off of a heavily modified fork from hexgnu/linkedin
+## [0.1.15f] - 2022-01-12
+- fix get_post 400 error on restli-v2
+
+## [0.1.15e] - 2021-12-21
+- add refresh_access_token method and endpoints, removed api dash format options
+- fetch refresh_token in oauth2 call

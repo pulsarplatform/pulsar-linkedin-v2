@@ -33,7 +33,7 @@ If you are using OAuth 2.0 and the v1 LinkedIn API, see [emorikawa/linkedin-oaut
 In Bundler:
 
 ```ruby
-gem "pulsar-linkedin-v2", "~> 0"
+gem "pulsar-linkedin-v2", "~> 1"
 ```
 
 Otherwise:
@@ -114,6 +114,10 @@ You will need to configure the following items:
 LinkedIn.configure do |config|
   config.client_id     = ENV["LINKEDIN_CLIENT_ID"]
   config.client_secret = ENV["LINKEDIN_CLIENT_SECRET"]
+
+  # Set API Version (for reference: https://docs.microsoft.com/en-us/linkedin/marketing/versioning?view=li-lms-unversioned) 
+  # REQUIRED from v1.0.0
+  config.api_version = 'YYYYMM'
 
   # This must exactly match the redirect URI you set on your application's
   # settings page. If your redirect_uri is dynamic, pass it into

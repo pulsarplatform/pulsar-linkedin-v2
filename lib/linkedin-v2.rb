@@ -54,6 +54,13 @@ module LinkedIn
 
   def self.configure
     yield self.config
+    api_version_check
+  end
+
+  private
+
+  def self.api_version_check
+    raise ConfigurationError, "API Version is required." if @config.api_version.nil?
   end
 end
 

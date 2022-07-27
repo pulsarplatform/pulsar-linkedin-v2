@@ -13,6 +13,7 @@ describe "LinkedIn configuration" do
     LinkedIn.configure do |config|
       config.client_id = config_value
       config.client_secret = config_value
+      config.api_version = '202206'
     end
   end
 

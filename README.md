@@ -100,8 +100,9 @@ Here is how to get an access token using this linkedin-oauth2 gem:
 You will need to configure the following items:
 
 1. Your **client id** (aka API Key)
-1. Your **client secret** (aka Secret Key)
-1. Your **redirect uri**. On LinkedIn's website you must input a list of
+2. Your **client secret** (aka Secret Key)
+3. Your **api version** to reference.
+4. Your **redirect uri**. On LinkedIn's website you must input a list of
    valid redirect URIs. If you use the same one each time, you can set it
    in the `LinkedIn.configure` block. If your redirect uris change
    depending on business logic, you can pass it into the `auth_code_url`

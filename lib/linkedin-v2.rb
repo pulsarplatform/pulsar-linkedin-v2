@@ -61,6 +61,8 @@ module LinkedIn
 
   def self.api_version_check
     raise ConfigurationError, "API Version is required." if @config.api_version.nil?
+    raise ConfigurationError. "API Version must be equal or more than '202206'." if (@config.api_version.to_i < 202206)
+    raise ConfigurationError, "API Version is incorrect, please check format." unless Date.strptime(@config.api_version, '%Y%m')
   end
 end
 

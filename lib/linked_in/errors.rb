@@ -13,7 +13,7 @@ module LinkedIn
   # Raised when users call a deprecated function
   class Deprecated < LinkedIn::Error; end
 
-  # Raised when a config parameter is wrong or required
+  # Raised when a config parameter has wrong value or is required
   class ConfigurationError < LinkedIn::Error; end
 
   # Raised when we know requests will be malformed and LinkedIn returns

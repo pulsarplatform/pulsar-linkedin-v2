@@ -36,6 +36,7 @@ module LinkedIn
     def profile(id={}, options={})
       options = parse_id(id, options)
       path = profile_path(options)
+      options[:api_legacy] = true
       get(path, options)
     end
 

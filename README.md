@@ -117,7 +117,7 @@ LinkedIn.configure do |config|
   config.client_secret = ENV["LINKEDIN_CLIENT_SECRET"]
 
   # Set API Version (for reference: https://docs.microsoft.com/en-us/linkedin/marketing/versioning?view=li-lms-unversioned) 
-  # REQUIRED from v1.0.0
+  # This config is REQUIRED from linkedin-v2 v1.0.0
   config.api_version = 'YYYYMM'
 
   # This must exactly match the redirect URI you set on your application's
@@ -165,6 +165,10 @@ Once you have an access token, you can query LinkedIn's API.
 
 Your access token encodes the permissions you're allowed to have. See Step
 2 and [this LinkedIn document](https://developer.linkedin.com/documents/authentication#granting) for how to change the permissions. See each section's documentation on LinkedIn for more information on what permissions get you access to.
+
+### API Legacy Note
+
+For compatibility reason the old API endpoint is still present. If you need to call old V2 Legacy API you must pass `option['api_legacy] = true` in parameters.
 
 ### People
 

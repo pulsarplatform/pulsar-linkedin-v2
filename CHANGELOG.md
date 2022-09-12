@@ -1,5 +1,8 @@
 ## CHANGELOG
 
+## [1.0.1] - 2022-09-12
+- fix mime-type dependency
+
 ## [1.0.0] - 2022-09-12
 - migrate to Marketing API Versioning
 

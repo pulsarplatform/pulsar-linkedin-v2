@@ -25,16 +25,16 @@ Gem::Specification.new do |gem|
   gem.add_dependency "faraday", "~> 0.11"
   gem.add_dependency 'mime-types', '~> 1.16'
 
-  gem.add_development_dependency "rake"
+  gem.add_development_dependency "rake", "~> 13.0"
   gem.add_development_dependency "rspec", "~> 3.0"
 
   # We use YARD for documentation
   # Extra gems for GitHub flavored MarkDown in YARD
-  gem.add_development_dependency "yard"
-  gem.add_development_dependency "redcarpet"
-  gem.add_development_dependency "github-markdown"
+  gem.add_development_dependency "yard", "~> 0.9"
+  gem.add_development_dependency "redcarpet", "~> 3.5"
+  gem.add_development_dependency "github-markdown", "~> 0.6"
 
   # We use VCR to mock LinkedIn API calls
-  gem.add_development_dependency "vcr"
-  gem.add_development_dependency "webmock"
+  gem.add_development_dependency "vcr", "~> 6"
+  gem.add_development_dependency "webmock", "~> 3"
 end

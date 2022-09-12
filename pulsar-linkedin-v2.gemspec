@@ -8,10 +8,10 @@ Gem::Specification.new do |gem|
   gem.email       = ["mike.desjardins@cereslogic.com"]
   gem.version     = LinkedIn::VERSION
   gem.authors     = ["Mike Desjardins"]
-  gem.summary     = "Ruby wrapper for the LinkedIn v2 API"
+  gem.summary     = "LinkedIn v2 API wrapper"
   gem.license     = "MIT"
   gem.homepage    = "http://github.com/mdesjardins/linkedin-v2"
-  gem.description = gem.summary
+  gem.description = "Ruby wrapper for the LinkedIn v2 API"
 
   gem.files         = `git ls-files`.split("\n")
   gem.test_files    = `git ls-files -- spec/**/*`.split("\n")
@@ -23,7 +23,7 @@ Gem::Specification.new do |gem|
   gem.add_dependency "oauth2",  "~> 1.0"
   gem.add_dependency "hashie",  "~> 4"
   gem.add_dependency "faraday", "~> 0.11"
-  gem.add_dependency 'mime-types', '>= 1.16'
+  gem.add_dependency 'mime-types', '~> 1.16'
 
   gem.add_development_dependency "rake"
   gem.add_development_dependency "rspec", "~> 3.0"

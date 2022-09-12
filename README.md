@@ -168,7 +168,7 @@ Your access token encodes the permissions you're allowed to have. See Step
 
 ### API Legacy Note
 
-For compatibility reason the old API endpoint is still present. If you need to call old V2 Legacy API you must pass `option['api_legacy] = true` in parameters.
+For compatibility reason the old API endpoint is still present. If you need to call old V2 Legacy API you must pass `option['api_legacy] = true` in method endpoint options.
 
 ### People
 

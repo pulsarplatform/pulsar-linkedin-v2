@@ -1,6 +1,6 @@
 ## CHANGELOG
 
-## [1.0.0] - 2022-07-26
+## [1.0.0] - 2022-09-12
 - migrate to Marketing API Versioning
 
 ## [0.1.17] - 2022-03-10

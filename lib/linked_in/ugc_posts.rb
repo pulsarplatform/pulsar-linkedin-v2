@@ -32,6 +32,7 @@ module LinkedIn
       def ugc_posts_get(path, restli, options = {})
         options[:headers] ||= {}
         options[:headers]['X-Restli-Protocol-Version'] = '2.0.0' if restli
+        options[:api_legacy] = true
         get(path, options)
       end
 

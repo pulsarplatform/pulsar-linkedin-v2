@@ -33,7 +33,7 @@ If you are using OAuth 2.0 and the v1 LinkedIn API, see [emorikawa/linkedin-oaut
 In Bundler:
 
 ```ruby
-gem "pulsar-linkedin-v2", "~> 0"
+gem "pulsar-linkedin-v2", "~> 1"
 ```
 
 Otherwise:
@@ -100,8 +100,9 @@ Here is how to get an access token using this linkedin-oauth2 gem:
 You will need to configure the following items:
 
 1. Your **client id** (aka API Key)
-1. Your **client secret** (aka Secret Key)
-1. Your **redirect uri**. On LinkedIn's website you must input a list of
+2. Your **client secret** (aka Secret Key)
+3. Your **api version** to reference.
+4. Your **redirect uri**. On LinkedIn's website you must input a list of
    valid redirect URIs. If you use the same one each time, you can set it
    in the `LinkedIn.configure` block. If your redirect uris change
    depending on business logic, you can pass it into the `auth_code_url`
@@ -114,6 +115,10 @@ You will need to configure the following items:
 LinkedIn.configure do |config|
   config.client_id     = ENV["LINKEDIN_CLIENT_ID"]
   config.client_secret = ENV["LINKEDIN_CLIENT_SECRET"]
+
+  # Set API Version (for reference: https://docs.microsoft.com/en-us/linkedin/marketing/versioning?view=li-lms-unversioned) 
+  # This config is REQUIRED from linkedin-v2 v1.0.0
+  config.api_version = 'YYYYMM'
 
   # This must exactly match the redirect URI you set on your application's
   # settings page. If your redirect_uri is dynamic, pass it into
@@ -160,6 +165,10 @@ Once you have an access token, you can query LinkedIn's API.
 
 Your access token encodes the permissions you're allowed to have. See Step
 2 and [this LinkedIn document](https://developer.linkedin.com/documents/authentication#granting) for how to change the permissions. See each section's documentation on LinkedIn for more information on what permissions get you access to.
+
+### API Legacy Note
+
+For compatibility reason the old API endpoint is still present. If you need to call old V2 Legacy API you must pass `option['api_legacy] = true` in method endpoint options.
 
 ### People
 

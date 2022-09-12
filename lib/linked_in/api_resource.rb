@@ -87,16 +87,21 @@ module LinkedIn
       return @connection.path_prefix + path
     end
 
+    def prepend_prefix_legacy(path)
+      return LinkedIn.config.api_legacy + path
+    end
+
     def prepare_connection_params(path, options)
-      path = prepend_prefix(path)
-      path += generate_field_selectors(options)
+      url_path = prepend_prefix(path)
+      url_path = prepend_prefix_legacy(path) if options.delete(:api_legacy)
+      url_path += generate_field_selectors(options)
 
       headers = options.delete(:headers) || {}
 
       #Removed due refresh_token API error
       #params = format_options_for_query(options)
 
-      return [path, options, headers]
+      return [url_path, options, headers]
     end
 
     # Dasherizes the param keys

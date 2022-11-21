@@ -2,10 +2,10 @@ module LinkedIn
   # Posts APIs
   #
   # See APIResource class for @options params
-  # 
+  #
   # Docs: https://learn.microsoft.com/en-us/linkedin/marketing/integrations/community-management/shares/posts-api
   # Migration reference: https://learn.microsoft.com/en-us/linkedin/marketing/integrations/community-management/contentapi-migration-guide
-  
+
   class Posts < APIResource
 
     # You can retrieve Posts by URNs: ugcPostUrn (urn:li:ugcPost:{id}) or shareUrn (urn:li:share:{id}).

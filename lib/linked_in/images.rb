@@ -25,7 +25,6 @@ module LinkedIn
 
       def images_get(path, options = {})
         options[:headers] ||= {}
-        options[:headers]['X-Restli-Protocol-Version'] = '2.0.0'
         get(path, options)
       end
 

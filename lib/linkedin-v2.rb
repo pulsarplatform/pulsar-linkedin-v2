@@ -36,6 +36,8 @@ require "linked_in/share_and_social_stream"
 require 'linked_in/media'
 require 'linked_in/ugc_posts'
 require 'linked_in/posts'
+require 'linked_in/images'
+require 'linked_in/videos'
 require 'linked_in/video_analytics'
 require 'linked_in/ad_accounts'
 require 'linked_in/ad_analytics'

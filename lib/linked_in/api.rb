@@ -81,6 +81,12 @@ module LinkedIn
                             :get_posts_batch,
                             :posts
 
+    def_delegators :@images, :get_image,
+                             :get_images_batch
+    
+    def_delegators :@videos, :get_video,
+                             :get_videos_batch
+
     def_delegators :@video_analytics, :video_analytics
 
     def_delegators :@ad_accounts, :ad_accounts,
@@ -114,6 +120,8 @@ module LinkedIn
       @media = LinkedIn::Media.new(@connection)
       @ugc_posts = LinkedIn::UgcPosts.new(@connection)
       @posts = LinkedIn::Posts.new(@connection)
+      @images = LinkedIn::Images.new(@connection)
+      @videos = LinkedIn::Videos.new(@connection)
       @video_analytics = LinkedIn::VideoAnalytics.new(@connection)
       # @groups = LinkedIn::Groups.new(@connection) not supported by v2 API?
       @ad_accounts = LinkedIn::AdAccounts.new(@connection)

@@ -28,7 +28,7 @@ module LinkedIn
     def posts(options = {})
       urn = options.delete(:urn)
       promoted = options.delete(:promoted) || false
-      isdsc = promoted ? '&idDsc=true' : ''
+      isdsc = promoted ? '&isDsc=true' : ''
       path = "/posts?author=#{urn}#{isdsc}&q=author"
       posts_get(path, options)
     end

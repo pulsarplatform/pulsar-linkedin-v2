@@ -100,6 +100,7 @@ module LinkedIn
                                         :functions,
                                         :industries,
                                         :countries,
+                                        :geo_countries,
                                         :seniorities,
                                         :skills_data,
                                         :super_titles,

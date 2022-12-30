@@ -57,7 +57,7 @@ module LinkedIn
     end
 
     def geo_countries(options = {})
-      path = "/geoTypeahead?q=search&query=united"
+      path = "/geoTypeahead?q=search&query=united&locale=(language:en,country:US)"
       get(path, options)
     end
 

@@ -56,7 +56,7 @@ module LinkedIn
       get(path, options)
     end
 
-    def geo_countries(options = {})
+    def geo(options = {})
       urn = options.delete(:urn)
       path = "/geo/#{urn}"
       options[:api_legacy] = true

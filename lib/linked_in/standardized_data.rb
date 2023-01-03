@@ -57,7 +57,9 @@ module LinkedIn
     end
 
     def geo_countries(options = {})
-      path = "/geoTypeahead?q=search&query=united&locale=(language:en,country:US)"
+      urn = options.delete(:urn)
+      path = "/geo/#{urn}"
+      options[:api_legacy] = true
       get(path, options)
     end
 

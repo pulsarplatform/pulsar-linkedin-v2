@@ -37,4 +37,5 @@ Gem::Specification.new do |gem|
   # We use VCR to mock LinkedIn API calls
   gem.add_development_dependency "vcr", "~> 6"
   gem.add_development_dependency "webmock", "~> 3"
+  gem.add_development_dependency "byebug", "~> 11"
 end

@@ -12,7 +12,7 @@ module LinkedIn
     def get_post(options = {})
       urn = options.delete(:urn)
       path = "/posts/#{urn}"
-      posts_get(path, options)
+      get(path, options)
     end
 
     # Multiple posts can be retrieved and viewed in a single API call by passing in multiple ugcPostUrn or shareUrn into the ids parameter. 

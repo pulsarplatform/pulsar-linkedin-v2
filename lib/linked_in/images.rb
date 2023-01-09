@@ -11,7 +11,7 @@ module LinkedIn
     def get_image(options = {})
       urn = options.delete(:urn)
       path = "/images/#{urn}"
-      images_get(path, options)
+      get(path, options)
     end
 
     # Multiple images can be retrieved and viewed in a single API call by passing in multiple Image URN into the ids parameter
@@ -23,8 +23,10 @@ module LinkedIn
 
     private
 
+      # Add X-Restli header
       def images_get(path, options = {})
         options[:headers] ||= {}
+        options[:headers]['X-Restli-Protocol-Version'] = '2.0.0'
         get(path, options)
       end
 

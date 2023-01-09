@@ -18,13 +18,13 @@ module LinkedIn
     def get_images_batch(options = {})
       urns = options.delete(:urns).join(',')
       path = "/images?ids=List(#{urns})"
-      images_get(path, options)
+      restli_get(path, options)
     end
 
     private
 
       # Add X-Restli header
-      def images_get(path, options = {})
+      def restli_get(path, options = {})
         options[:headers] ||= {}
         options[:headers]['X-Restli-Protocol-Version'] = '2.0.0'
         get(path, options)

@@ -60,13 +60,13 @@ module LinkedIn
       urns = options.delete(:urns).join(',')
       path = "/geo?ids=List(#{urns})"
       options[:api_legacy] = true
-      data_get(path, options)
+      restli_get(path, options)
     end
 
     private
 
       # Add X-Restli header
-      def data_get(path, options = {})
+      def restli_get(path, options = {})
         options[:headers] ||= {}
         options[:headers]['X-Restli-Protocol-Version'] = '2.0.0'
         get(path, options)

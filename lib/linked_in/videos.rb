@@ -18,13 +18,13 @@ module LinkedIn
     def get_videos_batch(options = {})
       urns = options.delete(:urns).join(',')
       path = "/videos?ids=List(#{urns})"
-      videos_get(path, options)
+      restli_get(path, options)
     end
 
     private
 
       # Add X-Restli header
-      def videos_get(path, options = {})
+      def restli_get(path, options = {})
         options[:headers] ||= {}
         options[:headers]['X-Restli-Protocol-Version'] = '2.0.0'
         get(path, options)

@@ -23,13 +23,9 @@ module LinkedIn
     end
 
     # You can retrieve all posts for an organization.
-    # With isDsc param true, returns posts that are direct sponsored content. If false, returns organic posts.
-    # Set options['promoted] = TRUE/FALSE
     def posts(options = {})
       urn = options.delete(:urn)
-      promoted = options.delete(:promoted) || false
-      isdsc = promoted ? '&isDsc=true' : ''
-      path = "/posts?author=#{urn}#{isdsc}&q=author"
+      path = "/posts?author=#{urn}&q=author"
       posts_get(path, options)
     end
 

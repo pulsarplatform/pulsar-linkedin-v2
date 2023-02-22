@@ -22,7 +22,7 @@ Gem::Specification.new do |gem|
 
   gem.add_dependency "oauth2",  "~> 1.0"
   gem.add_dependency "hashie",  "~> 4"
-  gem.add_dependency "faraday", "~> 0.11"
+  gem.add_dependency "faraday", "~> 2"
   gem.add_dependency 'mime-types', '~> 3.0'
 
   gem.add_development_dependency "rake", "~> 13.0"
@@ -37,4 +37,5 @@ Gem::Specification.new do |gem|
   # We use VCR to mock LinkedIn API calls
   gem.add_development_dependency "vcr", "~> 6"
   gem.add_development_dependency "webmock", "~> 3"
+  gem.add_development_dependency "byebug", "~> 11"
 end

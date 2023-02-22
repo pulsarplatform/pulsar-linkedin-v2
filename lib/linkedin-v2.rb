@@ -35,6 +35,9 @@ require "linked_in/communications"
 require "linked_in/share_and_social_stream"
 require 'linked_in/media'
 require 'linked_in/ugc_posts'
+require 'linked_in/posts'
+require 'linked_in/images'
+require 'linked_in/videos'
 require 'linked_in/video_analytics'
 require 'linked_in/ad_accounts'
 require 'linked_in/ad_analytics'
@@ -63,7 +66,7 @@ module LinkedIn
     raise ConfigurationError, "API Version is required." if @config.api_version.nil?
     date_valid = Date.strptime(@config.api_version, '%Y%m') rescue false
     raise ConfigurationError, "API Version format is not valid." unless date_valid
-    raise ConfigurationError, "API Version number is incorrect." unless Date.strptime(@config.api_version, '%Y%m') >= Date.strptime('202206', '%Y%m')
+    raise ConfigurationError, "API Version number is incorrect or newer version is needed." unless Date.strptime(@config.api_version, '%Y%m') >= Date.strptime('202208', '%Y%m')
   end
 end
 

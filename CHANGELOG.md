@@ -1,5 +1,8 @@
 ## CHANGELOG
 
+## [1.1.0] - 2023-01-22
+- add Posts, Images, Videos, Geo endpoints
+
 ## [1.0.1] - 2022-09-12
 - fix mime-type dependency
 

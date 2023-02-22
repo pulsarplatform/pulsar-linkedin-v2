@@ -25,7 +25,6 @@
 /TAGS
 data
 dump.rdb
-Gemfile.lock
 
 .ruby-version
 .rspec_status

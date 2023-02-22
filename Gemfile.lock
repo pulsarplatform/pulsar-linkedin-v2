@@ -1,0 +1,101 @@
+PATH
+  remote: .
+  specs:
+    pulsar-linkedin-v2 (1.1.0)
+      faraday (~> 2)
+      hashie (~> 4)
+      mime-types (~> 3.0)
+      oauth2 (~> 1.0)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    addressable (2.8.0)
+      public_suffix (>= 2.0.2, < 5.0)
+    byebug (11.1.3)
+    coveralls (0.8.23)
+      json (>= 1.8, < 3)
+      simplecov (~> 0.16.1)
+      term-ansicolor (~> 1.3)
+      thor (>= 0.19.4, < 2.0)
+      tins (~> 1.6)
+    crack (0.4.5)
+      rexml
+    diff-lcs (1.5.0)
+    docile (1.4.0)
+    faraday (2.7.4)
+      faraday-net_http (>= 2.0, < 3.1)
+      ruby2_keywords (>= 0.0.4)
+    faraday-net_http (3.0.2)
+    github-markdown (0.6.9)
+    hashdiff (1.0.1)
+    hashie (4.1.0)
+    json (2.6.2)
+    jwt (2.7.0)
+    mime-types (3.4.1)
+      mime-types-data (~> 3.2015)
+    mime-types-data (3.2023.0218.1)
+    multi_json (1.15.0)
+    multi_xml (0.6.0)
+    oauth2 (1.4.11)
+      faraday (>= 0.17.3, < 3.0)
+      jwt (>= 1.0, < 3.0)
+      multi_json (~> 1.3)
+      multi_xml (~> 0.5)
+      rack (>= 1.2, < 4)
+    public_suffix (4.0.7)
+    rack (3.0.4.1)
+    rake (13.0.6)
+    redcarpet (3.5.1)
+    rexml (3.2.5)
+    rspec (3.11.0)
+      rspec-core (~> 3.11.0)
+      rspec-expectations (~> 3.11.0)
+      rspec-mocks (~> 3.11.0)
+    rspec-core (3.11.0)
+      rspec-support (~> 3.11.0)
+    rspec-expectations (3.11.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.11.0)
+    rspec-mocks (3.11.1)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.11.0)
+    rspec-support (3.11.0)
+    ruby2_keywords (0.0.5)
+    simplecov (0.16.1)
+      docile (~> 1.1)
+      json (>= 1.8, < 3)
+      simplecov-html (~> 0.10.0)
+    simplecov-html (0.10.2)
+    sync (0.5.0)
+    term-ansicolor (1.7.1)
+      tins (~> 1.0)
+    thor (1.2.1)
+    tins (1.31.1)
+      sync
+    vcr (6.1.0)
+    webmock (3.14.0)
+      addressable (>= 2.8.0)
+      crack (>= 0.3.2)
+      hashdiff (>= 0.4.0, < 2.0.0)
+    webrick (1.7.0)
+    yard (0.9.28)
+      webrick (~> 1.7.0)
+
+PLATFORMS
+  arm64-darwin-21
+
+DEPENDENCIES
+  byebug (~> 11)
+  coveralls
+  github-markdown (~> 0.6)
+  pulsar-linkedin-v2!
+  rake (~> 13.0)
+  redcarpet (~> 3.5)
+  rspec (~> 3.0)
+  vcr (~> 6)
+  webmock (~> 3)
+  yard (~> 0.9)
+
+BUNDLED WITH
+   2.3.17

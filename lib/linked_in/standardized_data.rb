@@ -18,6 +18,9 @@ module LinkedIn
 
     def functions(options = {})
       path = "/functions"
+      # Workaround to use old api_legacy for functions endpoint since 202308 version doesn't give access with versioned one
+      # (to check in next updates)
+      options[:api_legacy] = true
       get(path, options)
     end
 

@@ -132,7 +132,7 @@ module LinkedIn
     # https://docs.microsoft.com/en-us/linkedin/marketing/integrations/community-management/organizations/organization-lookup-api#retrieve-organization-follower-count
     #
     def organization_follower_count organization_urn
-      path = "/networkSizes/#{organization_urn}?edgeType=CompanyFollowedByMember"
+      path = "/networkSizes/#{organization_urn}?edgeType=COMPANY_FOLLOWED_BY_MEMBER"
       get(path)
     end
 

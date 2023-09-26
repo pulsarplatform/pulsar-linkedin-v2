@@ -121,7 +121,7 @@ module LinkedIn
       elsif fields.empty?
         return ""
       else
-        return "?projection=(#{fields})"
+        return "?fields=#{fields}"
       end
     end
 

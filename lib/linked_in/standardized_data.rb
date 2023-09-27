@@ -18,16 +18,16 @@ module LinkedIn
 
     def functions(options = {})
       path = "/functions"
-      # Workaround to use old api_legacy for functions endpoint since 202308 version doesn't give access with versioned one
-      # (to check in next updates)
+      # Workaround to use old api_legacy for this endpoint.
+      # Since v202308 the Versioned API doesn't give more access to Functions endpoint (TO DO: check next updates and API permission changes)
       options[:api_legacy] = true
       get(path, options)
     end
 
     def industries(options = {})
       path = "/industries"
-      # Workaround to use old api_legacy for functions endpoint since 202308 version doesn't give access with versioned one
-      # (to check in next updates)
+      # Workaround to use old api_legacy for this endpoint.
+      # Since v202308 the Versioned API doesn't return URN id in Industries endpoint (TO DO: check next updates and API permission changes)
       options[:api_legacy] = true
       get(path, options)
     end
@@ -39,8 +39,8 @@ module LinkedIn
 
     def seniorities(options = {})
       path = "/seniorities"
-      # Workaround to use old api_legacy for functions endpoint since 202308 version doesn't give access with versioned one
-      # (to check in next updates)
+      # Workaround to use old api_legacy for this endpoint.
+      # Since v202308 the Versioned API doesn't return URN id in Seniorities endpoint (TO DO: check next updates and API permission changes)
       options[:api_legacy] = true
       get(path, options)
     end

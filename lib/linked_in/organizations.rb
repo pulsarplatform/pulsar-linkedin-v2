@@ -7,7 +7,7 @@ module LinkedIn
   class Organizations < APIResource
     # Retrieve an Organization
     #
-    # @see https://developer.linkedin.com/docs/guide/v2/organizations/organization-lookup-api
+    # @see https://learn.microsoft.com/en-us/linkedin/marketing/integrations/community-management/organizations/organization-lookup-api
     #
     # @macro organization_path_options
     # @option options [String] :scope
@@ -17,12 +17,15 @@ module LinkedIn
     # @return [LinkedIn::Mash]
     def organization(options = {})
       path = organization_path(options)
+      # Workaround to use old api_legacy for this endpoint.
+      # Since v202308 the Versioned API doesn't give more access to Digital Media Asset Schema (TO DO: check next updates and API permission changes)
+      options[:api_legacy] = true
       get(path, options)
     end
 
     # Retrieve an Organization Brand
     #
-    # @see https://developer.linkedin.com/docs/guide/v2/organizations/organization-lookup-api
+    # @see https://learn.microsoft.com/en-us/linkedin/marketing/integrations/community-management/organizations/organization-lookup-api
     #
     # @macro brand_path_options
     # @option options [String] :scope

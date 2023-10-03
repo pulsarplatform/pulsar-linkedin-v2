@@ -66,7 +66,7 @@ module LinkedIn
     raise ConfigurationError, "API Version is required." if @config.api_version.nil?
     date_valid = Date.strptime(@config.api_version, '%Y%m') rescue false
     raise ConfigurationError, "API Version format is not valid." unless date_valid
-    raise ConfigurationError, "API Version number is incorrect or newer version is needed." unless Date.strptime(@config.api_version, '%Y%m') >= Date.strptime('202208', '%Y%m')
+    raise ConfigurationError, "API Version number is incorrect or newer version (~>202309) is needed." unless Date.strptime(@config.api_version, '%Y%m') >= Date.strptime('202309', '%Y%m')
   end
 end
 

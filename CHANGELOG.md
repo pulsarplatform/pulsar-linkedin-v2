@@ -1,5 +1,9 @@
 ## CHANGELOG
 
+## [1.2.0] - 2023-10-03
+- migrate to API v202309
+- migrate Decoration to Additional Info fields
+
 ## [1.1.0] - 2023-01-22
 - add Posts, Images, Videos, Geo endpoints
 

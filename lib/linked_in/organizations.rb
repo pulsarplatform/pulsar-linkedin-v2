@@ -40,10 +40,12 @@ module LinkedIn
 
     # Retrieve Organization Access Control informaion
     #
-    # @see https://developer.linkedin.com/docs/guide/v2/organizations/organization-lookup-api#acls
+    # @see https://learn.microsoft.com/en-us/linkedin/marketing/integrations/community-management/organizations/organization-authorizations/getting-started
     #
     def organization_acls(options = {})
       path = '/organizationAcls'
+      # Set to API Legacy due inconsistent data returned for some profiles in Versioned API
+      options[:api_legacy] = true
       get(path, options)
     end
 

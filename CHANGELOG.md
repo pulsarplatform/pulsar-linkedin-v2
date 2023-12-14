@@ -1,5 +1,8 @@
 ## CHANGELOG
 
+## [1.2.1] - 2023-10-03
+- reverted Comment endpoint to Legacy
+
 ## [1.2.0] - 2023-10-03
 - migrate to API v202309
 - migrate Decoration to Additional Info fields

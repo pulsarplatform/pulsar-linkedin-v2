@@ -131,6 +131,7 @@ module LinkedIn
     def comments(options = {})
       urn = options.delete(:urn)
       path = "/socialActions/#{urn}/comments"
+      options[:api_legacy] = true
       get(path, options)
     end
 

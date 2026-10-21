@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    pulsar-linkedin-v2 (1.2.1)
+    pulsar-linkedin-v2 (1.2.2)
       faraday (~> 2)
       hashie (~> 4)
       mime-types (~> 3.0)

@@ -32,6 +32,25 @@ module LinkedIn
       get(path, options)
     end
 
+    # Industry Taxonomy Versions (V2). Use this to resolve industry URNs returned by
+    # organization follower/page statistics.
+    # Omit locale query params: with Rest.li 2.0, locale.language/locale.country are
+    # rejected (403 Unpermitted fields). LinkedIn defaults to en_US when omitted.
+    # @see https://learn.microsoft.com/en-us/linkedin/shared/references/v2/standardized-data/industrytaxonomyversions
+    # @option ids [Array] industry numeric ids
+    # @option version [String] taxonomy version (DEFAULT = latest)
+    def industry_taxonomy(options = {})
+      version = options.delete(:version) || 'DEFAULT'
+      ids = Array(options.delete(:ids)).map(&:to_s)
+      path = if ids.any?
+               "/industryTaxonomyVersions/#{version}/industries?ids=List(#{ids.join(',')})"
+             else
+               "/industryTaxonomyVersions/#{version}/industries"
+             end
+      options[:api_legacy] = true
+      restli_get(path, options)
+    end
+
     def countries(options = {})
       path = "/countries"
       get(path, options)

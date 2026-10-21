@@ -99,6 +99,7 @@ module LinkedIn
                                         :fields_of_study,
                                         :functions,
                                         :industries,
+                                        :industry_taxonomy,
                                         :countries,
                                         :geo,
                                         :seniorities,

@@ -1,5 +1,9 @@
 ## CHANGELOG
 
+## [1.2.2] - 2026-10-21
+- add Industry Taxonomy Versions endpoint (`industry_taxonomy`) to resolve Industry V2 URNs
+- omit locale query params on `industry_taxonomy` (Rest.li 2.0 rejects `locale.language` / `locale.country`)
+
 ## [1.2.1] - 2023-10-03
 - reverted Comment endpoint to Legacy
 
